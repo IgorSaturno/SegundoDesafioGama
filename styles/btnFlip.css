@@ -1,0 +1,77 @@
+.btn-flip {
+	cursor: pointer;
+	position: relative;
+	height: 48px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	perspective: 500px;
+	margin-left: 35px;
+	margin-bottom: 20px;
+}
+
+.btn-flip .flip-handler {
+	display: grid;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform: translateZ(-25px);
+	transition: transform 0.3s;
+}
+
+.btn-flip .flip-handler .front, .btn-flip .flip-handler .back {
+	grid-column: 1;
+	grid-row: 1;
+	margin: 0;
+	padding: 0 30px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	letter-spacing: .4em;
+}
+
+.btn-flip .flip-handler .front {
+	background-color: transparent;
+	color: #fff;
+	transform: rotateY(0) translateZ(24px);
+}
+
+.btn-flip .flip-handler .back {
+	color: rgba(34, 34, 34, 0);
+	transform: rotateX(90deg) translateZ(24px);
+	overflow: hidden;
+}
+
+.btn-flip .flip-handler .back:before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 100%;
+	background: transparent;
+	transform: skewY(15deg) translateY(15%);
+	transition: all .2s ease;
+	transition-delay: .15s;
+}
+
+.btn-flip:hover .flip-handler {
+	transform: translateZ(-24px) rotateX(-90deg);
+}
+
+.btn-flip:hover .flip-handler .front {
+	background: black;
+	transition: all .8s ease;
+}
+
+.btn-flip:hover .flip-handler .back {
+	color: #222;
+	transition: color .8s linear;
+}
+
+.btn-flip:hover .flip-handler .back:before {
+	transform: skewY(15deg) translateY(-20%);
+	background: white;
+}
