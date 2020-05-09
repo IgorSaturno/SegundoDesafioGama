@@ -5,15 +5,16 @@
         <meta charset="utf-8">
         <title>Airbnb fake</title>
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/flexbox.css">
         <link rel="stylesheet" href="styles/btnFlip.css">
         <link rel="icon" type="image/png" href="imagens/airbnb-brands.svg">
         <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
     </head>
-    
+
     <body>
         <header>
             <img class="logo" src="imagens/airbnb-brands.svg" alt="logo">
-            <a class="cta" href="#"><button>Entrar</button></a>
+            <a class="cta" href="#"><button class="btn-login">Entrar</button></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Cadastre-se</a></li>
@@ -23,7 +24,28 @@
                 </ul>
             </nav>
         </header>
-        <div class="container">
+        <!-- css grid flexbox -->
+        <h1 class="titulo"> Podemos estar afastados, mas<br>
+            vamos superar isso juntos. </h1>
+        <section class="flex">
+            <div class="card">
+                <img src="imagens/7412.jpg">
+                <div class="card-text">
+                    <h2>Experiencias online</h2>
+                    <p>
+                        Atividades únicas que podemos fazer juntos,
+                        oferecidas por anfi
+                        triões de todo mundo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+        </section>
+        <!--<div class="container">
+
             <div class="conteudo">
                 <h1 class="titulo"> Podemos estar afastados, mas<br>
                     vamos superar isso juntos. </h1>
@@ -90,13 +112,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-50">
                         <div class="card-2">
                             <img class="imgNoticia" src="imagens/7412.jpg" />
                             <div class="card-text">
                                 <h2 class="letrasP">Meditação</h2>
-                                
+
                                 <p class="letrasP">
                                     Medite junto conosco em aulas online, e se sinta mais leve
                                     e relaxado.
@@ -104,13 +126,13 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-50">
                         <div class="card-2">
                             <img class="imgNoticia" src="imagens/7412.jpg" />
                             <div class="card-text">
                                 <h2 class="letrasP">Alongamento</h2>
-                                
+
                                 <p class="letrasP">
                                     Alongue-se. Respire. Relaxe.
                                     Aula de Ioga com os amigos.
@@ -118,18 +140,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-flip">
-                        <a href="https://api.whatsapp.com/send?phone=5511961261636&text=Ola!%20gostaria%20de%20saber%20mais%20detalhes" target="_blank">
-                            <div class="flip-handler">
-                            <div class="front">Whatsapp</div>
-                            <div class="back">Whatsapp</div>
-                            </div>
-                        </a>
-                    </div>
+                    <a class="btn-flip" href="#" target="_blank">
+                        <div class="flip-handler">
+                            <div class="front">SAIBA MAIS</div>
+                            <div class="back">SAIBA MAIS</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        </div>
+        </div> -->
     </body>
     <footer>
 
