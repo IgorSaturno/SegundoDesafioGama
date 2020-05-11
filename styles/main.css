@@ -1,3 +1,10 @@
+body {
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
 .bg-color {
     background-color: rgb(15, 15, 15);
 }
@@ -5,8 +12,7 @@
 .logo {
     cursor: pointer;
     margin-right: auto;
-    width: 3%;
-    order: 3;
+    width: 30px;
 
 }
 
@@ -34,10 +40,6 @@ nav {
 
 .nav_links li a:hover {
     color: rgb(66, 66, 66)
-}
-
-.cta {
-    order: 1;
 }
 
 .btn-login {
@@ -96,6 +98,8 @@ nav {
 
 .card-text {
     padding: 4px;
+    margin-left: 5px;
+    font-weight: lighter;
 }
 
 .imgNoticia {
@@ -133,4 +137,19 @@ h2 {
 .letrasP {
     color: #fff;
     margin-bottom: 5px;
+}
+
+header {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    z-index: 10;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.divisao {
+    display: flex;
+    overflow: hidden;
+    height: 100%;
 }

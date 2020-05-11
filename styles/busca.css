@@ -1,12 +1,13 @@
 .topo {
-	margin: 25px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
 }
 
 .structureSearch {
 	border: 1px solid #F7F7F7;
 	border-radius: 12px;
 	background-color: #FFFFFF;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
 	color: #222222;
 	display: inline-flex;
 	margin: 0 auto;
