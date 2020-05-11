@@ -1,91 +1,99 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name='viewport' content="width=device-witdh, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<meta charset="utf-8">
-		<title>Airbnb fake</title>
-		<link rel="icon" type="image/png" href="imagens/airbnb-brands.svg">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="styles/maps.css">
-		<link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" href="styles/busca.css">
-		<link rel="stylesheet" href="styles/flexbox.css">
 
-		<style>
-      #mapa {
-				height:400px;
-				display: flex;
-				justify-content: center;
-				z-index: 3;
-				/* width:400px; */
-      }
-    </style>
-	</head>
+<head>
+	<meta name='viewport' content="width=device-witdh, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta charset="utf-8">
+	<title>Airbnb Fake</title>
+	<link rel="icon" type="image/png" href="imagens/airbnb-brands.svg">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/busca.css">
+	<link rel="stylesheet" href="styles/flexbox.css">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true">
+	</script>
 
-	<body>
-		 <header>
-		 		<div class="topo">
-					<img class="logo" src="imagens/airbnb-brands.svg" alt="logo">
+</head>
 
-					<a class="cta" href="#"><button class="btn-login">Cadastrar-se</button></a>
-				</div>
-				<div class="structureSearch">
-					<div class="positionSearch">
+<body>
+	<header>
+		<div class="topo">
+			<img class="logo" src="imagens/airbnb-brands.svg" alt="logo">
 
-						<label class="spaceInput" tabindex="0" for="inputLocal">
-							<label class="titleInput">Localização</label>
-							<input class="write" id="inputLocal" placeholder="Para onde você vai?">
-						</label>
+			<a class="mx-3" href="#"><button class="btn-login">Cadastrar-se</button></a>
+		</div>
+		<div class="structureSearch">
+			<div class="positionSearch">
 
-							<div class="divider"></div>
+				<label class="spaceInput" tabindex="0" for="inputLocal">
+					<label class="titleInput">Localização</label>
+					<input class="write" id="inputLocal" placeholder="Para onde você vai?">
+				</label>
 
-							<label class="spaceInput" for="inputCheckInOut">
-								<label class="titleInput">Check-in/checkout</label>
-								<input type="date" class="write" id="inputCheckInOut" placeholder="Insira as datas">
-							</label>
+				<div class="divider"></div>
 
-							<div class="divider"></div>
+				<label class="spaceInput" for="inputCheckInOut">
+					<label class="titleInput">Check-in</label>
+					<input type="date" class="write" id="inputCheckIn" placeholder="Insira as datas">
+				</label>
 
-							<label class="spaceInput" for="inputHospedes">
-								<label class="titleInput">Hóspedes</label>
-								<input type="number" class="write" id="inputHospedes" placeholder="Insira o número de hóspedes">
-							</label>
+				<div class="divider"></div>
 
-						</div>
-								<div class="spaceButton">
-									<button type="submit" class="bgButton">
-										<span class="structureButton">
-											<span class="propsButton" style="background-position: calc((100 - var(--mouse-x, 0)) * 1%) calc((100 - var(--mouse-y, 0)) * 1%);"></span>
-										</span>
-										<span class="positionBuscar">
-											<span class="internalButton">
-												<span class="lupa">
-													<svg style="display:block;fill:none;height:12px;width:12px;stroke:currentColor;stroke-width:5.333333333333333;overflow:visible" aria-hidden="true" role="presentation" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-														<g fill="none">
-															<path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
-														</g>
-													</svg>
-												</span>
-												<span class="writingB">Buscar</span>
-											</span>
-										</span>
-									</button>
-								</div>
-							</div>
-		 </header>
-		 <section class="list-group list-group-flush apartmentList" id="list">
+				<label class="spaceInput" for="inputCheckInOut">
+					<label class="titleInput">Checkout</label>
+					<input type="date" class="write" id="inputCheckOut" placeholder="Insira as datas">
+				</label>
 
-			</section>
-			<div id="mapa"></div>
-			<script async defer
-    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXjHoik1HN8S_yQf8jbNSZ5eHRkhCLh94&callback=inicializar">
-    </script>
-			<script src="maps.js"></script>
-		 <script src="script.js"></script>
+				<div class="divider"></div>
 
-	</body>
+				<label class="spaceInput" for="inputHospedes">
+					<label class="titleInput">Hóspedes</label>
+					<input type="number" min="1" class="write" id="inputHospedes" placeholder="Insira o número de hóspedes">
+				</label>
+
+			</div>
+			<div class="spaceButton">
+				<button class="bgButton" onclick="listApartments()">
+					<span class="positionBuscar">
+						<span class="internalButton">
+							<span class="lupa">
+								<svg
+									style="display:block;fill:none;height:12px;width:12px;stroke:currentColor;stroke-width:5.333333333333333;overflow:visible"
+									aria-hidden="true" role="presentation" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+									<g fill="none">
+										<path
+											d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+										</path>
+									</g>
+								</svg>
+							</span>
+							<span class="writingB">Buscar</span>
+						</span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<div class="divisao">
+		<div class="list-group list-group-flush apartmentList" id="list"></div>
+		<div id="map-canvas"></div>
+	</div>
+
+	<script src="maps.js"></script>
+	<script src="script.js"></script>
+
+</body>
+
 </html>
